@@ -1,23 +1,30 @@
-//Write a program to make a grading system using if else statemetns.
+//Write a program to perform arithmetic operations using switch case.
 #include <iostream>
 using namespace std;
 
 int main() {
-    int marks;
-    cout << "Enter the marks: ";
-    cin >> marks;
-    if (marks >= 90) {
-        cout << "Grade: A" << endl;
-    } else if (marks >= 80) {
-        cout << "Grade: B" << endl;
-    } else if (marks >= 70) {
-        cout << "Grade: C" << endl;
-    } else if (marks >= 60) {
-        cout << "Grade: D" << endl;
-    } else if (marks >= 50) {
-        cout << "Grade: E" << endl;
-    } else {
-        cout << "Grade: F" << endl;
+    int a, b;
+    char o;
+    cout << "Enter the Operation to be performed: ";
+    cin >> o;
+    cout << "Enter the two numbers: ";
+    cin >> a >> b;
+    switch (o) {
+        case '+':
+            cout << "The sum of the two numbers is: " << (a + b) << endl;
+            break;
+        case '-':
+            cout << "The difference of the two numbers is: " << (a - b) << endl;
+            break;
+        case '*':
+            cout << "The product of the two numbers is: " << (a * b) << endl;
+            break;
+        case '/':
+            cout << "The division of the two numbers is: " << (a / b) << endl;
+            break;
+        default:
+            cout << "Invalid Operation!" << endl;
+            break;
     }
     return 0;
 }

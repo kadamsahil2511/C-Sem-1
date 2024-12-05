@@ -1,30 +1,15 @@
-//Write a program to perform arithmetic operations using switch case.
+// Write a program to calculate the factorial of a given number using loops.
 #include <iostream>
 using namespace std;
 
 int main() {
-    int a, b;
-    char o;
-    cout << "Enter the Operation to be performed: ";
-    cin >> o;
-    cout << "Enter the two numbers: ";
-    cin >> a >> b;
-    switch (o) {
-        case '+':
-            cout << "The sum of the two numbers is: " << (a + b) << endl;
-            break;
-        case '-':
-            cout << "The difference of the two numbers is: " << (a - b) << endl;
-            break;
-        case '*':
-            cout << "The product of the two numbers is: " << (a * b) << endl;
-            break;
-        case '/':
-            cout << "The division of the two numbers is: " << (a / b) << endl;
-            break;
-        default:
-            cout << "Invalid Operation!" << endl;
-            break;
+    double n;
+    cout << "Enter the number: ";
+    cin >> n;
+    double fact = 1;
+    for (double i = 1; i <= n; i++) {
+        fact *= i;
     }
+    cout << "The factorial of " << n << " is: " << fact << endl;
     return 0;
 }
