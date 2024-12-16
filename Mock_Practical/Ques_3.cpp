@@ -1,18 +1,29 @@
-// Write a program to input 8 numbers into an array and count how many of them are even and how many are odd.
+/*
+Question 3:
+Write a program that defines a function int add(int a, int b) to calculate and return
+the sum of two integers.
+- Call this function from main() with two user-input values
+- Display the returned result
+*/
+
 #include <iostream>
 using namespace std;
 
-int main() {
-    int arr[8], even = 0, odd = 0;
-    for (int i = 0; i < 8; i++) {
-        cout << "Enter number " << i + 1 << ": ";
-        cin >> arr[i];
-        if (arr[i] % 2 == 0) {
-            even++;
-        } else {
-            odd++;
-        }
-    }
-    cout << "Number of even numbers: " << even << endl;
-    return 0;
+int add(int a, int b) {
+    return a + b;
 }
+
+int main() {
+    int num1, num2;
+    
+    cout << "Enter first number: ";
+    cin >> num1;
+    
+    cout << "Enter second number: ";
+    cin >> num2;
+    
+    int result = add(num1, num2);
+    cout << "Sum of " << num1 << " and " << num2 << " is: " << result << endl;
+    
+    return 0;
+} 
